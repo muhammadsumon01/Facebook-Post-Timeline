@@ -1,0 +1,254 @@
+:root {
+    --ms-primary-color: rgba(0, 0, 0, 0.719);
+}
+
+/* Predefiend CSS */
+.ms-card {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.075);
+}
+
+.ms-p-15 {
+    padding: 15px;
+}
+
+.ms-px-15 {
+    padding: 0px 15px;
+}
+
+.ms-py-15 {
+    padding: 15px 0px;
+}
+
+.ms-br-15 {
+    border-radius: 15px;
+}
+
+hr {
+    margin: 0 !important;
+}
+
+body {
+    color: var(--ms-primary-color);
+}
+
+#facebook-timeline {
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+#facebook-timeline .post-add {
+    flex-direction: row;
+}
+
+
+#facebook-timeline .post-add--user-image,
+.avatar {
+    border-radius: 50%;
+    margin-right: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#facebook-timeline .post-add--btn {
+    background-color: #e4e6e975;
+    padding: 12px 10px;
+    border-radius: 15px;
+    width: 100%;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    cursor: pointer;
+}
+
+#facebook-timeline .post-add--btn:hover {
+    background-color: #e4e6e946;
+}
+
+
+#facebook-timeline .post-list {
+    margin: 50px auto;
+}
+
+#facebook-timeline .post-list .post-item {
+    width: 100%;
+}
+
+#facebook-timeline .post-list .post-item .post-item-header {}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--left {
+    display: flex;
+    align-items: center;
+}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--left img {}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--left .text {}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--left .text span {
+    display: block;
+}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--left .text span:nth-child(2) {
+    font-size: 14px;
+}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--options {
+    user-select: none;
+    position: relative;
+}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--options.opt-active ul {
+    display: block;
+}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--options ul {
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0;
+    top: 30px;
+    box-shadow: 0px 0px 5px #0000001c;
+    display: none;
+}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--options ul li {
+    list-style: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--options ul li:hover {
+    border: 1px solid rgb(219, 180, 180);
+}
+
+#facebook-timeline .post-list .post-item .post-item-header .post-item-header--options svg {
+    cursor: pointer;
+    color: var(--ms-primary-color);
+}
+
+
+#facebook-timeline .post-list .post-item .post-item-main {}
+
+#facebook-timeline .post-list .post-item .post-item-main--desc {
+    line-height: 180%;
+    font-size: 15px;
+}
+
+#facebook-timeline .post-list .post-item .post-item-main--img {
+    height: 400px;
+}
+
+#facebook-timeline .post-list .post-item .post-item-main--img img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+body.addPost {
+    overflow-y: hidden;
+}
+
+body.addPost::after {
+    content: "";
+    min-width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.842);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+body.addPost .create-post-form {
+
+    visibility: visible;
+    top: 50%;
+    z-index: 9999;
+
+}
+
+.create-post-form {
+    width: 500px;
+    position: fixed;
+    height: fit-content;
+    background-color: white;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: top 0.2s;
+    -webkit-transition: top 0.2s;
+    -moz-transition: top 0.2s;
+    -ms-transition: top 0.2s;
+    -o-transition: top 0.2s;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.create-post-form .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create-post-form>div {
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    font-size: 22px;
+    color: var(--ms-primary-color);
+}
+
+.create-post-form .close-icon {
+    font-weight: 400;
+    font-size: 30px;
+    background-color: rgba(244, 242, 242, 0.84);
+    height: 38px;
+    line-height: 30px;
+    border-radius: 50%;
+    width: 38px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+.create-post-form .main .post-desc {
+    width: 100%;
+    height: 200px;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: x-large;
+}
+
+.create-post-form .main .post-img {
+    width: 100%;
+    outline: none;
+    padding-left: 8px;
+}
+
+.create-post-form .main .post-img::placeholder {
+    font-size: 16px;
+    text-transform: capitalize;
+
+}
+
+.create-post-form .main button {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+}
